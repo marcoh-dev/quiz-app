@@ -8,8 +8,142 @@
   </head>
   <body>
     <header><h1>Quiz App</h1></header>
-    <main></main>
-    <nav>
+    <main>
+      <section class="question-card">
+        <h2 class="question-card__question">
+          What is the difference between the CSS Flexbox properties
+          <code>justify-content</code> and <code>align-items</code>, and which
+          axis does each one affect in a flex container?
+        </h2>
+        <div class="question-card__answer" hidden>
+          <p>
+            <code>justify-content</code> aligns flex items along the
+            <strong>main axis</strong>.<br /><code>align-items</code> aligns
+            flex items along the <strong>cross axis</strong>.
+          </p>
+        </div>
+        <label class="question-card__toggle-answer-label"
+          ><span class="question-card-show-label">Show answer</span
+          ><span class="question-card-hide-label" hidden>Hide answer</span>
+          <input
+            class="question-card__toggle-answer-checkbox"
+            type="checkbox"
+            value="1"
+        /></label>
+
+        <label class="question-card__bookmark"
+          ><span class="question-card__bookmark-icon"></span>
+          <input
+            class="question-card__bookmark-checkbox"
+            type="checkbox"
+            value="1"
+        /></label>
+
+        <ul class="question-card__categories">
+          <li class="question-card__category">css</li>
+          <li class="question-card__category">flexbox</li>
+        </ul>
+      </section>
+      <section class="question-card">
+        <h2 class="question-card__question">
+          What is the purpose of the <code>&lt;head&gt;</code> element in an
+          HTML document?
+        </h2>
+        <div class="question-card__answer" hidden>
+          <p>
+            The <code>&lt;head&gt;</code> element contains
+            <strong>metadata about the webpage</strong>, such as the page title,
+            links to CSS files, character encoding, and other information that
+            is <strong>not displayed directly on the page</strong>.
+          </p>
+        </div>
+        <label class="question-card__toggle-answer-label"
+          ><span class="question-card-show-label">Show answer</span
+          ><span class="question-card-hide-label" hidden>Hide answer</span>
+          <input
+            class="question-card__toggle-answer-checkbox"
+            type="checkbox"
+            value="1"
+        /></label>
+
+        <label class="question-card__bookmark"
+          ><span class="question-card__bookmark-icon"></span>
+          <input
+            class="question-card__bookmark-checkbox"
+            type="checkbox"
+            value="1"
+        /></label>
+
+        <ul class="question-card__categories">
+          <li class="question-card__category">html</li>
+        </ul>
+      </section>
+      <section class="question-card">
+        <h2 class="question-card__question">
+          What property controls the space between grid andf flexbox items?
+        </h2>
+        <div class="question-card__answer" hidden>
+          <p>
+            <code>gap</code> (or <code>row-gap</code> and
+            <code>column-gap</code>).
+          </p>
+        </div>
+        <label class="question-card__toggle-answer-label"
+          ><span class="question-card-show-label">Show answer</span
+          ><span class="question-card-hide-label" hidden>Hide answer</span>
+          <input
+            class="question-card__toggle-answer-checkbox"
+            type="checkbox"
+            value="1"
+        /></label>
+
+        <label class="question-card__bookmark"
+          ><span class="question-card__bookmark-icon"></span>
+          <input
+            class="question-card__bookmark-checkbox"
+            type="checkbox"
+            value="1"
+        /></label>
+
+        <ul class="question-card__categories">
+          <li class="question-card__category">css</li>
+          <li class="question-card__category">grid</li>
+          <li class="question-card__category">flexbox</li>
+        </ul>
+      </section>
+      <section class="question-card">
+        <h2 class="question-card__question">
+          What CSS property turns an element into a grid container?
+        </h2>
+        <div class="question-card__answer" hidden>
+          <p>
+            <code>display: grid;</code>
+          </p>
+        </div>
+        <label class="question-card__toggle-answer-label"
+          ><span class="question-card-show-label">Show answer</span
+          ><span class="question-card-hide-label" hidden>Hide answer</span>
+          <input
+            class="question-card__toggle-answer-checkbox"
+            type="checkbox"
+            value="1"
+        /></label>
+
+        <label class="question-card__bookmark"
+          ><span class="question-card__bookmark-icon"></span>
+          <input
+            class="question-card__bookmark-checkbox"
+            type="checkbox"
+            value="1"
+        /></label>
+
+        <ul class="question-card__categories">
+          <li class="question-card__category">css</li>
+          <li class="question-card__category">grid</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
       <ul class="navbar">
         <li class="navbar__element navbar__element--active">
           <a href="index.html" class="navbar__element-link"
@@ -33,6 +167,6 @@
           ></a>
         </li>
       </ul>
-    </nav>
+    </footer>
   </body>
 </html>
