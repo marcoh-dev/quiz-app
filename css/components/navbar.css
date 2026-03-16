@@ -40,13 +40,13 @@
 }
 
 .navbar__element-icon--home {
-  background-image: url("/assets/home.svg");
+  background-image: url("../../assets/home.svg");
 }
 
 .navbar__element-icon--bookmarks {
-  background-image: url("/assets/card-bookmark.png");
+  background-image: url("../../assets/card-bookmark.png");
 }
 
 .navbar__element-icon--profile {
-  background-image: url("/assets/profile.svg");
+  background-image: url("../../assets/profile.svg");
 }

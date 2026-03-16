@@ -1,0 +1,14 @@
+.profile-card__flex {
+  display: flex;
+  flex-direction: rows;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile-card__image {
+  width: 30%;
+}
+
+.profile-card__name {
+}
