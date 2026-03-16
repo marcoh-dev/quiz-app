@@ -15,7 +15,7 @@ h1 {
   margin: 0px;
 }
 
-nav {
+footer {
   max-width: 600px;
   margin: 0 auto;
   background-color: purple;
@@ -23,11 +23,14 @@ nav {
 
   position: sticky;
   bottom: 0px;
+  z-index: 100;
 }
 
 main {
   max-width: 600px;
   margin: 20px auto;
-  background-color: purple;
   padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
