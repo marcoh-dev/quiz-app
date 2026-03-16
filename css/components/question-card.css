@@ -23,6 +23,10 @@
   text-align: center;
 }
 
+.question-card__answer li {
+  text-align: left;
+}
+
 .question-card__toggle-answer-label {
   text-align: center;
   display: block;
@@ -111,4 +115,18 @@
 
 .question-card__bookmark-checkbox {
   display: none;
+}
+
+body.bookmarks
+  .question-card:not(:has(input.question-card__bookmark-checkbox:checked)) {
+  display: none;
+}
+
+main:empty:before {
+  content: "test";
+  display: block;
+}
+
+.question-card-fallback:first-child {
+  display: block;
 }

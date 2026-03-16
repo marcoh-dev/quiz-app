@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App</title>
+    <title>Bookmarks | Quiz App</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+  <body class="bookmarks">
     <header><h1>Quiz App</h1></header>
     <main>
       <section class="question-card">
@@ -45,40 +45,7 @@
           <li class="question-card__category">flexbox</li>
         </ul>
       </section>
-      <section class="question-card">
-        <h2 class="question-card__question">
-          What is the purpose of the <code>&lt;head&gt;</code> element in an
-          HTML document?
-        </h2>
-        <div class="question-card__answer" hidden>
-          <p>
-            The <code>&lt;head&gt;</code> element contains
-            <strong>metadata about the webpage</strong>, such as the page title,
-            links to CSS files, character encoding, and other information that
-            is <strong>not displayed directly on the page</strong>.
-          </p>
-        </div>
-        <label class="question-card__toggle-answer-label"
-          ><span class="question-card-show-label">Show answer</span
-          ><span class="question-card-hide-label" hidden>Hide answer</span>
-          <input
-            class="question-card__toggle-answer-checkbox"
-            type="checkbox"
-            value="1"
-        /></label>
 
-        <label class="question-card__bookmark"
-          ><span class="question-card__bookmark-icon"></span>
-          <input
-            class="question-card__bookmark-checkbox"
-            type="checkbox"
-            value="1"
-        /></label>
-
-        <ul class="question-card__categories">
-          <li class="question-card__category">html</li>
-        </ul>
-      </section>
       <section class="question-card">
         <h2 class="question-card__question">
           What property controls the space between grid andf flexbox items?
@@ -144,55 +111,17 @@
           <li class="question-card__category">grid</li>
         </ul>
       </section>
-      <section class="question-card">
-        <h2 class="question-card__question">
-          What is the difference between the <code>&lt;div&gt;</code> and
-          <code>&lt;span&gt;</code> elements in HTML?
-        </h2>
-        <div class="question-card__answer" hidden>
-          <ul>
-            <li>
-              <code>&lt;div&gt;</code> is a block-level element. It takes up the
-              full width of the page and starts on a new line.
-            </li>
-            <li>
-              <code>&lt;span&gt;</code> is an inline element. It only takes up
-              as much space as its content and stays in the same line.
-            </li>
-          </ul>
-        </div>
-        <label class="question-card__toggle-answer-label"
-          ><span class="question-card-show-label">Show answer</span
-          ><span class="question-card-hide-label" hidden>Hide answer</span>
-          <input
-            class="question-card__toggle-answer-checkbox"
-            type="checkbox"
-            value="1"
-        /></label>
-
-        <label class="question-card__bookmark"
-          ><span class="question-card__bookmark-icon"></span>
-          <input
-            class="question-card__bookmark-checkbox"
-            type="checkbox"
-            value="1"
-        /></label>
-
-        <ul class="question-card__categories">
-          <li class="question-card__category">html</li>
-        </ul>
-      </section>
     </main>
     <footer>
       <ul class="navbar">
-        <li class="navbar__element navbar__element--active">
+        <li class="navbar__element">
           <a href="index.html" class="navbar__element-link"
             ><span
               class="navbar__element-icon navbar__element-icon--home"
             ></span
           ></a>
         </li>
-        <li class="navbar__element">
+        <li class="navbar__element navbar__element--active">
           <a href="bookmarks.html" class="navbar__element-link"
             ><span
               class="navbar__element-icon navbar__element-icon--bookmarks"
