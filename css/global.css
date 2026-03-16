@@ -14,3 +14,20 @@ h1 {
   color: white;
   margin: 0px;
 }
+
+nav {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: purple;
+  padding: 10px 20px;
+
+  position: sticky;
+  bottom: 0px;
+}
+
+main {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: purple;
+  padding: 10px 20px;
+}
