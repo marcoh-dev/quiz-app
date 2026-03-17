@@ -21,12 +21,6 @@
   font-weight: 600;
 }
 
-.question-card:has(input.question-card__toggle-answer-checkbox:checked)
-  .question-card__answer {
-  display: block;
-  text-align: center;
-}
-
 .question-card__answer li {
   text-align: left;
 }
@@ -46,11 +40,13 @@
   background-color: var(--contrast-background-color);
 }
 
+/* hide show-label */
 .question-card:has(input.question-card__toggle-answer-checkbox:checked)
   .question-card-show-label {
   display: none;
 }
 
+/* show hide-label */
 .question-card:has(input.question-card__toggle-answer-checkbox:checked)
   .question-card-hide-label {
   display: block;
@@ -58,6 +54,13 @@
 
 .question-card__toggle-answer-checkbox {
   display: none;
+}
+
+/* show answer */
+.question-card:has(input.question-card__toggle-answer-checkbox:checked)
+  .question-card__answer {
+  display: block;
+  text-align: center;
 }
 
 .question-card__categories {
