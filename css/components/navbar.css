@@ -45,13 +45,13 @@
 }
 
 .navbar__element-icon--home {
-  mask-image: url("../../assets/home.svg");
+  mask-image: url("../../assets/nav-home.svg");
 }
 
 .navbar__element-icon--bookmarks {
-  mask-image: url("../../assets/card-bookmark.png");
+  mask-image: url("../../assets/nav-bookmark.png");
 }
 
 .navbar__element-icon--profile {
-  mask-image: url("../../assets/profile.svg");
+  mask-image: url("../../assets/nav-profile.svg");
 }

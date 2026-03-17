@@ -4,9 +4,9 @@
   padding: var(--spacing-normal);
 }
 
-.profile-card__flex {
+.profile-card__head {
   display: flex;
-  flex-direction: rows;
+  flex-direction: row;
   gap: var(--spacing-normal);
   justify-content: flex-start;
   align-items: center;

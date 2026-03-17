@@ -28,7 +28,6 @@ body:has(#darkmode:checked) {
   --primary-highlight-color: #b287ff;
   --primary-background-color: #222;
   --contrast-background-color: #ddd;
-  background-color: var(--primary-background-color);
 }
 
 * {
@@ -36,7 +35,6 @@ body:has(#darkmode:checked) {
 }
 
 body {
-  margin: 0px;
   background-color: var(--primary-background-color);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--primary-text-color);
