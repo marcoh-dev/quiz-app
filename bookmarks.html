@@ -11,7 +11,7 @@
   <body class="bookmarks">
     <header><h1>Quiz App</h1></header>
     <main>
-      <section class="question-card">
+      <section class="question-card" tabindex="0" aria-label="Question">
         <h2 class="question-card__question">
           What is the difference between the CSS Flexbox properties
           <code>justify-content</code> and <code>align-items</code>, and which
@@ -48,7 +48,7 @@
         </ul>
       </section>
 
-      <section class="question-card">
+      <section class="question-card" tabindex="0" aria-label="Question">
         <h2 class="question-card__question">
           What property controls the space between grid andf flexbox items?
         </h2>
@@ -82,7 +82,7 @@
           <li class="question-card__category">flexbox</li>
         </ul>
       </section>
-      <section class="question-card">
+      <section class="question-card" tabindex="0" aria-label="Question">
         <h2 class="question-card__question">
           What CSS property turns an element into a grid container?
         </h2>
@@ -117,21 +117,33 @@
     <footer>
       <ul class="navbar">
         <li class="navbar__element">
-          <a href="index.html" class="navbar__element-link"
+          <a
+            href="index.html"
+            class="navbar__element-link"
+            role="menuitem"
+            aria-label="go to Home page"
             ><span
               class="navbar__element-icon navbar__element-icon--home"
             ></span
           ></a>
         </li>
         <li class="navbar__element navbar__element--active">
-          <a href="bookmarks.html" class="navbar__element-link"
+          <a
+            href="bookmarks.html"
+            class="navbar__element-link"
+            role="menuitem"
+            aria-label="go to Bookmarks page"
             ><span
               class="navbar__element-icon navbar__element-icon--bookmarks"
             ></span
           ></a>
         </li>
         <li class="navbar__element">
-          <a href="profile.html" class="navbar__element-link"
+          <a
+            href="profile.html"
+            class="navbar__element-link"
+            role="menuitem"
+            aria-label="go to Profile page"
             ><span
               class="navbar__element-icon navbar__element-icon--profile"
             ></span

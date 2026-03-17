@@ -123,6 +123,7 @@
   display: none;
 }
 
+/* hide un-bookmarked cards */
 body.bookmarks
   .question-card:not(:has(input.question-card__bookmark-checkbox:checked)) {
   display: none;

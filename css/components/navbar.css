@@ -40,9 +40,11 @@
   background-color: var(--contrast-text-color);
 }
 
+/*
 .navbar__element:hover .navbar__element-icon,
 .navbar__element--active .navbar__element-icon {
 }
+*/
 
 .navbar__element-icon--home {
   mask-image: url("../../assets/nav-home.svg");
