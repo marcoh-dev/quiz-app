@@ -1,36 +1,91 @@
+:root {
+  --primary-text-color: #000;
+  --contrast-text-color: #ffffff;
+  --primary-highlight-color: #347cce;
+  --primary-background-color: #ffffff;
+  --contrast-background-color: #000;
+
+  --max-width: 600px;
+  --border-width-sm: 2px;
+  --spacing-normal: 20px;
+  --spacing-small: 10px;
+  --border-radius-normal: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-text-color: #ddd;
+    --contrast-text-color: #222;
+    --primary-highlight-color: #b287ff;
+    --primary-background-color: #222;
+    --contrast-background-color: #ddd;
+  }
+}
+
+body:has(#darkmode:checked) {
+  --primary-text-color: #ddd;
+  --contrast-text-color: #222;
+  --primary-highlight-color: #b287ff;
+  --primary-background-color: #222;
+  --contrast-background-color: #ddd;
+  background-color: var(--primary-background-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
+  background-color: var(--primary-background-color);
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary-text-color);
+
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  max-width: 600px;
   margin: 0 auto;
-  background-color: purple;
-  padding: 10px 20px;
+  background-color: var(--primary-background-color);
+  padding: var(--spacing-normal);
+  width: 100%;
+  border: var(--border-width-sm) solid var(--contrast-background-color);
+  max-width: var(--max-width);
 }
 
 h1 {
-  color: white;
+  text-align: center;
   margin: 0px;
 }
 
+h1:first-letter {
+  color: var(--primary-highlight-color);
+}
+
 footer {
-  max-width: 600px;
   margin: 0 auto;
-  background-color: purple;
-  padding: 10px 20px;
+  background-color: var(--primary-background-color);
+  padding: var(--spacing-normal);
 
   position: sticky;
   bottom: 0px;
   z-index: 100;
+  width: 100%;
+  border: var(--border-width-sm) solid var(--contrast-background-color);
+  max-width: var(--max-width);
 }
 
 main {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 10px 20px;
+  margin: var(--spacing-normal) auto;
+  padding: 0px var(--spacing-normal);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--spacing-normal);
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
 }
