@@ -1,7 +1,13 @@
+.profile-card {
+  background-color: var(--primary-background-color);
+  border: var(--border-width-sm) solid var(--contrast-background-color);
+  padding: var(--spacing-normal);
+}
+
 .profile-card__flex {
   display: flex;
   flex-direction: rows;
-  gap: 20px;
+  gap: var(--spacing-normal);
   justify-content: flex-start;
   align-items: center;
 }
@@ -11,4 +17,94 @@
 }
 
 .profile-card__name {
+  text-align: left;
+}
+
+.profile-card__counters {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  list-style: none;
+  padding: 0;
+  gap: var(--spacing-normal);
+  justify-content: center;
+}
+
+.profile-card__counter {
+  border: var(--border-width-sm) solid var(--contrast-background-color);
+  border-radius: var(--border-radius-normal);
+  padding: var(--spacing-small) var(--spacing-normal);
+  padding-left: 60px;
+  margin: 0px;
+  background-size: auto 25px;
+  background-position: center left 10px;
+  background-repeat: no-repeat;
+  min-width: 100px;
+  text-align: right;
+}
+
+.profile-card__counter-questions {
+  background-image: url(../../assets/quiz-light.png);
+}
+.profile-card__counter-bookmarks {
+  background-image: url(../../assets/bookmarked-light.png);
+}
+
+.profile-card__setting {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-normal);
+}
+
+.profile-card__switch {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: var(--border-radius-normal);
+  border: var(--border-width-sm) solid var(--contrast-background-color);
+  cursor: pointer;
+  background-color: var(--primary-highlight-color);
+}
+
+.profile-card__switch:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-color: var(--contrast-text-color);
+  border-radius: 50%;
+  margin: 4px;
+}
+
+.profile-card__switch:has(input:checked),
+.profile-card__switch:hover {
+  background-color: var(--contrast-background-color);
+}
+
+.profile-card__switch:has(input:checked):before {
+  margin-left: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .profile-card__counter-questions {
+    background-image: url(../../assets/quiz-dark.png);
+  }
+  .profile-card__counter-bookmarks {
+    background-image: url(../../assets/bookmarked-dark.png);
+  }
+}
+
+/*
+body:has(#darkmode:checked) {
+
+}
+*/
+
+body:has(#darkmode:checked) .profile-card__counter-bookmarks {
+  background-image: url(../../assets/bookmarked-dark.png);
+}
+
+body:has(#darkmode:checked) .profile-card__counter-questions {
+  background-image: url(../../assets/quiz-dark.png);
 }

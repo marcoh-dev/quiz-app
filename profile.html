@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Profile | Quiz App</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
   </head>
   <body class="profile">
     <header><h1>Quiz App</h1></header>
@@ -19,6 +21,7 @@
           <h2 class="question-card__name">Max Doe</h2>
         </div>
         <div class="profile-card__description">
+          <h2>About me</h2>
           <p>
             I enjoy learning new things, especially about technology and coding.
             I like building small projects and experimenting with ideas to
@@ -27,7 +30,26 @@
             help people grow and improve their skills every day.
           </p>
         </div>
-        <div></div>
+        <ul class="profile-card__counters">
+          <li class="profile-card__counter profile-card__counter-questions">
+            12
+          </li>
+          <li class="profile-card__counter profile-card__counter-bookmarks">
+            4
+          </li>
+        </ul>
+        <h2>Settings</h2>
+        <div class="profile-card__setting">
+          <h3>Dark Mode</h3>
+          <label class="profile-card__switch">
+            <input
+              class="profile-card__switch-checkbox"
+              id="darkmode"
+              type="checkbox"
+              value="1"
+              hidden
+          /></label>
+        </div>
       </section>
     </main>
     <footer>
