@@ -82,6 +82,7 @@
   background-color: var(--contrast-background-color);
 }
 
+/* toggle on */
 .profile-card__switch:has(input:checked):before {
   margin-left: auto;
 }
