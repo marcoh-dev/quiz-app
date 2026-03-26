@@ -8,7 +8,7 @@
   text-align: left;
   font-size: 1.4em;
   font-weight: 600;
-  display: block;
+  display: inline-block;
   margin-top: var(--spacing-large);
   cursor: pointer;
 }
