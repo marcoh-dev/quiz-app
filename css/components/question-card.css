@@ -13,7 +13,6 @@
 
 .question-card code {
   color: var(--primary-highlight-color);
-  font-size: 1.1em;
 }
 
 .question-card li code,
@@ -185,6 +184,14 @@ body.bookmarks
 body.bookmarks
   .question-card:not(.question-card--bookmarked)) {
   display: none;
+}
+
+.question-card > *:first-child {
+  margin-top: var(--spacing-normal);
+}
+
+.question-card > *:last-child {
+  margin-bottom: var(--spacing-normal);
 }
 
 @media (prefers-color-scheme: dark) {
