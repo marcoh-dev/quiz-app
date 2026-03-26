@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Home | Quiz App</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body class="form">
+    <header><h1>Quiz App</h1></header>
+    <main>
+      <section class="new-card">
+        <form class="new-card__form" data-js="new-card__form">
+          <label for="question-input" class="new-card__label"
+            >Your question:</label
+          >
+          <textarea
+            id="question-input"
+            name="questionInput"
+            class="new-card__textarea"
+            data-js="question-input"
+            required
+          ></textarea>
+          <label for="answer-input" class="new-card__label">Your answer:</label>
+          <textarea
+            id="answer-input"
+            name="answerInput"
+            class="new-card__textarea"
+            data-js="answer-input"
+            required
+          ></textarea>
+          <label for="tag-input" class="new-card__label">Tag:</label>
+          <input
+            type="text"
+            id="tag-input"
+            name="tagInput"
+            class="new-card__input"
+            data-js="tag-input"
+            required
+          />
+          <button type="submit" class="new-card__button">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <ul class="navbar" role="tablist">
+        <li class="navbar__element" role="presentation">
+          <a
+            href="index.html"
+            class="navbar__element-link"
+            role="menuitem"
+            aria-label="go to Home page"
+            role="tab"
+            ><span
+              class="navbar__element-icon navbar__element-icon--home"
+            ></span
+          ></a>
+        </li>
+        <li class="navbar__element" role="presentation">
+          <a
+            href="bookmarks.html"
+            class="navbar__element-link"
+            role="menuitem"
+            aria-label="go to Bookmarks page"
+            role="tab"
+            ><span
+              class="navbar__element-icon navbar__element-icon--bookmarks"
+            ></span
+          ></a>
+        </li>
+        <li class="navbar__element navbar__element--active" role="presentation">
+          <a
+            href="form.html"
+            class="navbar__element-link"
+            role="menuitem"
+            aria-label="go to Add new Card page"
+            role="tab"
+            ><span
+              class="navbar__element-icon navbar__element-icon--new-card"
+            ></span
+          ></a>
+        </li>
+        <li class="navbar__element" role="presentation">
+          <a
+            href="profile.html"
+            class="navbar__element-link"
+            role="menuitem"
+            aria-label="go to Profile page"
+            role="tab"
+            ><span
+              class="navbar__element-icon navbar__element-icon--profile"
+            ></span
+          ></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

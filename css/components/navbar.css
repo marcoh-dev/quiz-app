@@ -54,6 +54,10 @@
   mask-image: url("../../assets/nav-bookmark.png");
 }
 
+.navbar__element-icon--new-card {
+  mask-image: url("../../assets/nav-new-card.svg");
+}
+
 .navbar__element-icon--profile {
   mask-image: url("../../assets/nav-profile.svg");
 }
