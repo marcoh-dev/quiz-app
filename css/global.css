@@ -7,9 +7,10 @@
 
   --max-width: 600px;
   --border-width-sm: 2px;
+  --spacing-large: 40px;
   --spacing-normal: 20px;
   --spacing-small: 10px;
-  --border-radius-normal: 20px;
+  --border-radius-normal: 25px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +39,8 @@ body {
   background-color: var(--primary-background-color);
   font-family: Arial, Helvetica, sans-serif;
   color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.6em;
 
   width: 100%;
   margin: 0 auto;

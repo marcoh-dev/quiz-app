@@ -1,0 +1,64 @@
+.new-card {
+  background-color: var(--primary-background-color);
+  border: var(--border-width-sm) solid var(--contrast-background-color);
+  padding: var(--spacing-normal);
+}
+
+.new-card__label {
+  text-align: left;
+  font-size: 1.4em;
+  font-weight: 600;
+  display: block;
+  margin-top: var(--spacing-large);
+  cursor: pointer;
+}
+
+.new-card__textarea,
+.new-card__input {
+  text-align: left;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--spacing-small) var(--spacing-normal);
+  color: var(--contrast-text-color);
+  background-color: var(--primary-highlight-color);
+  border: var(--border-width-sm) solid var(--contrast-background-color);
+  font-size: inherit;
+  margin-top: var(--spacing-normal);
+
+  background-color: transparent;
+  color: var(--primary-text-color);
+}
+
+.new-card__textarea {
+  resize: vertical;
+  min-height: 10em;
+  max-height: 10em;
+}
+
+.new-card__button {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  cursor: pointer;
+  padding: var(--spacing-small) var(--spacing-normal);
+  color: var(--contrast-text-color);
+  background-color: var(--primary-highlight-color);
+  border: var(--border-width-sm) solid var(--contrast-background-color);
+  font-size: inherit;
+
+  margin-top: var(--spacing-large);
+}
+
+.new-card__button:hover {
+  background-color: var(--contrast-background-color);
+}
+
+.new-card__form > *:first-child {
+  margin-top: var(--spacing-normal);
+}
+
+.new-card__form > *:last-child {
+  margin-bottom: var(--spacing-normal);
+}
