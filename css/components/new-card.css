@@ -24,7 +24,7 @@
   background-color: var(--primary-highlight-color);
   border: var(--border-width-sm) solid var(--contrast-background-color);
   font-size: inherit;
-  margin-top: var(--spacing-normal);
+  margin-top: var(--spacing-small);
 
   background-color: transparent;
   color: var(--primary-text-color);
@@ -61,4 +61,21 @@
 
 .new-card__form > *:last-child {
   margin-bottom: var(--spacing-normal);
+}
+
+.new-card__input-hint {
+  display: none;
+  text-align: right;
+  color: var(--primary-highlight-color);
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.new-card__input[maxlength] + .new-card__input-hint,
+.new-card__textarea[maxlength] + .new-card__input-hint {
+  display: block;
+}
+
+.new-card__input-hint + .new-card__label {
+  margin-top: var(--spacing-small);
 }

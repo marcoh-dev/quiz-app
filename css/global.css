@@ -23,7 +23,7 @@
   }
 }
 
-body:has(#darkmode:checked) {
+body[data-forcemode="dark"] {
   --primary-text-color: #ddd;
   --contrast-text-color: #222;
   --primary-highlight-color: #b287ff;
@@ -33,10 +33,6 @@ body:has(#darkmode:checked) {
 
 * {
   box-sizing: border-box;
-}
-
-pre {
-  white-space: pre-wrap;
 }
 
 body {
