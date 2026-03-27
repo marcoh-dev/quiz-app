@@ -14,30 +14,21 @@
     <main>
       <section class="profile-card">
         <section class="profile-card__head">
-          <img
-            class="profile-card__image"
-            src="./assets/avataaars.png"
-            alt="your profile picture"
-          />
+          <img class="profile-card__image" src="./assets/avataaars.png" alt="your profile picture" />
           <h2 class="question-card__name">Max Doe</h2>
         </section>
         <section class="profile-card__description">
           <h2>About me</h2>
           <p>
-            I enjoy learning new things, especially about technology and coding.
-            I like building small projects and experimenting with ideas to
-            understand how things work. In my free time, I watch videos, listen
-            to music, and explore the internet. I believe curiosity and practice
-            help people grow and improve their skills every day.
+            I enjoy learning new things, especially about technology and coding. I like building small projects and
+            experimenting with ideas to understand how things work. In my free time, I watch videos, listen to music,
+            and explore the internet. I believe curiosity and practice help people grow and improve their skills every
+            day.
           </p>
         </section>
         <ul class="profile-card__counters">
-          <li class="profile-card__counter profile-card__counter-questions">
-            12
-          </li>
-          <li class="profile-card__counter profile-card__counter-bookmarks">
-            4
-          </li>
+          <li class="profile-card__counter profile-card__counter-questions">12</li>
+          <li class="profile-card__counter profile-card__counter-bookmarks">4</li>
         </ul>
         <section class="profile-card__settings">
           <h2>Settings</h2>
@@ -48,7 +39,8 @@
                 class="profile-card__switch-checkbox"
                 id="darkmode"
                 type="checkbox"
-                value="1"
+                data-js="darkmode"
+                value="dark"
                 hidden
             /></label>
           </section>
@@ -58,25 +50,13 @@
     <footer>
       <ul class="navbar">
         <li class="navbar__element">
-          <a
-            href="index.html"
-            class="navbar__element-link"
-            role="menuitem"
-            aria-label="go to Home page"
-            ><span
-              class="navbar__element-icon navbar__element-icon--home"
-            ></span
+          <a href="index.html" class="navbar__element-link" role="menuitem" aria-label="go to Home page"
+            ><span class="navbar__element-icon navbar__element-icon--home"></span
           ></a>
         </li>
         <li class="navbar__element">
-          <a
-            href="bookmarks.html"
-            class="navbar__element-link"
-            role="menuitem"
-            aria-label="go to Bookmarks page"
-            ><span
-              class="navbar__element-icon navbar__element-icon--bookmarks"
-            ></span
+          <a href="bookmarks.html" class="navbar__element-link" role="menuitem" aria-label="go to Bookmarks page"
+            ><span class="navbar__element-icon navbar__element-icon--bookmarks"></span
           ></a>
         </li>
         <li class="navbar__element" role="presentation">
@@ -86,20 +66,12 @@
             role="menuitem"
             aria-label="go to Add new Card page"
             role="tab"
-            ><span
-              class="navbar__element-icon navbar__element-icon--new-card"
-            ></span
+            ><span class="navbar__element-icon navbar__element-icon--new-card"></span
           ></a>
         </li>
         <li class="navbar__element navbar__element--active">
-          <a
-            href="profile.html"
-            class="navbar__element-link"
-            role="menuitem"
-            aria-label="go to Profile page"
-            ><span
-              class="navbar__element-icon navbar__element-icon--profile"
-            ></span
+          <a href="profile.html" class="navbar__element-link" role="menuitem" aria-label="go to Profile page"
+            ><span class="navbar__element-icon navbar__element-icon--profile"></span
           ></a>
         </li>
       </ul>
