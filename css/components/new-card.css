@@ -28,6 +28,18 @@
 
   background-color: transparent;
   color: var(--primary-text-color);
+
+  transition: all 100ms ease-in-out;
+}
+.new-card__textarea:hover,
+.new-card__input:hover {
+  background-color: var(--primary-highlight-color-alpha);
+}
+
+.new-card__textarea:focus,
+.new-card__input:focus {
+  outline: none;
+  border-color: var(--primary-highlight-color);
 }
 
 .new-card__textarea {
@@ -49,10 +61,12 @@
   font-size: inherit;
 
   margin-top: var(--spacing-large);
+  transition: all 100ms ease-in-out;
 }
 
 .new-card__button:hover {
   background-color: var(--contrast-background-color);
+  transform: scale(1.05);
 }
 
 .new-card__form > *:first-child {

@@ -11,6 +11,7 @@
   align-self: center;
   flex: 1;
   background-color: var(--primary-highlight-color);
+  transition: all 100ms ease-in-out;
 }
 
 .navbar__element-link {
@@ -22,6 +23,10 @@
 .navbar__element:hover,
 .navbar__element--active {
   background-color: var(--contrast-background-color);
+}
+
+.navbar__element:hover {
+  transform: scale(1.05);
 }
 
 .navbar__element-icon {

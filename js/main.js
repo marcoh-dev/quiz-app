@@ -1,18 +1,32 @@
+/* this function cleans up the user input from the new card form field and returns the string */
 function userInputCleanUp(string) {
   // escape text
   const escapeObj = document.createElement("div");
   escapeObj.textContent = string.trim();
 
-  // replace backticks with html code tag
-  const stringArray = escapeObj.innerHTML.split("`");
+  // replace ` backticks with html code tag
+  const codeTagArray = escapeObj.innerHTML.split("`");
   let stringHtml = "";
-  for (let i = 0; i < stringArray.length; i++) {
-    if (i !== 0 && i % 2 && i + 1 != stringArray.length) {
-      stringHtml += "<code>" + stringArray[i];
+  for (let i = 0; i < codeTagArray.length; i++) {
+    if (i !== 0 && i % 2 && i + 1 != codeTagArray.length) {
+      stringHtml += "<code>" + codeTagArray[i];
     } else if (i !== 0 && !(i % 2)) {
-      stringHtml += "</code>" + stringArray[i];
+      stringHtml += "</code>" + codeTagArray[i];
     } else {
-      stringHtml += stringArray[i];
+      stringHtml += codeTagArray[i];
+    }
+  }
+
+  // replace ** with html strong tag
+  const strongTagArray = stringHtml.split("**");
+  stringHtml = "";
+  for (let i = 0; i < strongTagArray.length; i++) {
+    if (i !== 0 && i % 2 && i + 1 != strongTagArray.length) {
+      stringHtml += "<strong>" + strongTagArray[i];
+    } else if (i !== 0 && !(i % 2)) {
+      stringHtml += "</strong>" + strongTagArray[i];
+    } else {
+      stringHtml += strongTagArray[i];
     }
   }
 
@@ -22,6 +36,7 @@ function userInputCleanUp(string) {
   return stringHtml;
 }
 
+/* this function adds answer toggle and bookmark eventlisteners to a question card */
 function questionCardEventBinder(element) {
   const questionCardAnswerToggleButton = element.querySelector('[data-js="question-card__toggle-answer-button"]');
 
@@ -54,6 +69,7 @@ questionCards.forEach((questionCard) => {
   questionCardEventBinder(questionCard);
 });
 
+/* this function updates the counter of an input/textarea field if maxlength exists */
 function formInputCounter(element) {
   const maxLen = element.maxLength;
   const counter = document.querySelector('[data-js="' + element.dataset.js + '-counter"]');
@@ -78,6 +94,7 @@ if (newCardAnswerInput) {
   formInputCounter(newCardAnswerInput);
 }
 
+/* this function creates a new card, inserts data from the form submit and returns it */
 function newCardCreator(data, newCardIndex) {
   const newQuestionCard = document.createElement("section");
   newQuestionCard.classList.add("question-card", "question-card--answer-hidden");
@@ -149,15 +166,16 @@ function newCardCreator(data, newCardIndex) {
 }
 
 const newCardForm = document.querySelector('[data-js="new-card__form"]');
-let newCardIndex = 0;
 
 if (newCardForm) {
+  let newCardIndex = 0;
+
   newCardForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const data = Object.fromEntries(new FormData(e.target));
 
-    console.log(data);
+    ////console.log(data);
 
     e.target.reset();
     //e.target["question-input"].focus();
@@ -168,15 +186,60 @@ if (newCardForm) {
   });
 }
 
+/* darkmode stuff */
 const darkmodeToggle = document.querySelector('[data-js="darkmode"]');
 if (darkmodeToggle) {
+  /* tracks button changes */
   darkmodeToggle.addEventListener("input", (e) => {
-    console.log(e.target.checked);
-
     if (e.target.checked) {
       document.body.dataset.forcemode = e.target.value;
+      //console.log("force darkmode");
     } else {
-      document.body.dataset.forcemode = "";
+      delete document.body.dataset.forcemode;
+      //console.log("unforce, choose preference");
+    }
+  });
+
+  if (darkmodeToggle.checked) {
+    document.body.dataset.forcemode = darkmodeToggle.value;
+  } else {
+    delete document.body.dataset.forcemode;
+  }
+
+  const darkModeMql = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+
+  if (darkModeMql && darkModeMql.matches) {
+    // dark mode
+    darkmodeToggle.checked = true;
+    delete document.body.dataset.forcemode;
+    //console.log("prefers darkmode");
+  } else {
+    // light mode
+    darkmodeToggle.checked = false;
+    delete document.body.dataset.forcemode;
+    //console.log("prefers lightmode");
+  }
+
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+    const newColorScheme = event.matches ? "dark" : "light";
+    // use newColorScheme
+
+    delete document.body.dataset.forcemode;
+
+    if (newColorScheme === "dark") {
+      // dark mode
+      //console.log("prefers:" + newColorScheme);
+      darkmodeToggle.checked = true;
+    } else {
+      // light mode
+      //console.log("prefers:" + newColorScheme);
+      darkmodeToggle.checked = false;
     }
   });
 }
+
+/* easter egg */
+document.querySelector(".easter-egg").addEventListener("click", (e) => {
+  //console.log(e);
+  document.body.classList.toggle("spin");
+});
