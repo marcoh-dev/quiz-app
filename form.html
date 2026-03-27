@@ -22,16 +22,33 @@
             name="questionInput"
             class="new-card__textarea"
             data-js="question-input"
+            maxlength="150"
             required
           ></textarea>
+          <p class="new-card__input-hint">
+            <span
+              class="new-card__input-hint-counter"
+              data-js="question-input-counter"
+            ></span>
+            characters left
+          </p>
+
           <label for="answer-input" class="new-card__label">Your answer:</label>
           <textarea
             id="answer-input"
             name="answerInput"
             class="new-card__textarea"
             data-js="answer-input"
+            maxlength="150"
             required
           ></textarea>
+          <p class="new-card__input-hint">
+            <span
+              class="new-card__input-hint-counter"
+              data-js="answer-input-counter"
+            ></span>
+            characters left
+          </p>
           <label for="tag-input" class="new-card__label">Tag:</label>
           <input
             type="text"
