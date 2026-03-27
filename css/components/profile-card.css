@@ -96,16 +96,10 @@
   }
 }
 
-/*
-body:has(#darkmode:checked) {
-
-}
-*/
-
-body:has(#darkmode:checked) .profile-card__counter-bookmarks {
+body[data-forcemode="dark"] .profile-card__counter-bookmarks {
   background-image: url(../../assets/bookmarked-dark.png);
 }
 
-body:has(#darkmode:checked) .profile-card__counter-questions {
+body[data-forcemode="dark"] .profile-card__counter-questions {
   background-image: url(../../assets/quiz-dark.png);
 }
